@@ -1,0 +1,28 @@
+{% load static %} 
+    <!-- testimonial section -->
+    <section class="section" id="testmonial">
+        <div class="container text-center">
+            <p class="section-subtitle">What Think Client About Me ?</p>
+            <h6 class="section-title mb-6">Testmonial</h6>
+
+            <!-- row -->
+            <div class="row">
+                
+                <div class="col-md-6">
+                    {% for t in testimonial %}
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="{{t.img.url}}" class="testimonial-card-img"
+                                alt="{{t.name}}">
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">  {{t.detail}}  </p>
+                            <h6 class="testimonial-card-title">  {{t.name}}  </h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </section>
+     <!-- end of testimonial section -->
